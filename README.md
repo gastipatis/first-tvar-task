@@ -1,6 +1,6 @@
 # Requirements
 
-* JVM 11
+* JDK 11
 * Maven
 
 # Compilation
