@@ -20,7 +20,12 @@ public class App {
     while (true) {
       System.out.print("Write the n value. It must be integer number: ");
       try {
-        return scanner.nextInt();
+        int valueForN = scanner.nextInt();
+        if (valueForN <= 1) {
+          System.err.println("Error. N must be more than 1.");
+          continue;
+        }
+        return valueForN;
       } catch(NoSuchElementException ex) {
         System.err.println("Error. N can be only integer number.");
         scanner.nextLine();
@@ -36,14 +41,8 @@ public class App {
     if (n < 5) {
       return 1;
     }
-    for (int k = 2;; k++) {
-      int fivePowK = 1;
-      for (int i = 0; i < k; i++) {
-        fivePowK *= 5;
-      }
-      if (fivePowK > n) {
-        return k;
-      }
-    }
+    int k = 1;
+    for (int fivePowK = 5; fivePowK <= n; fivePowK *= 5, k++) {}
+    return k;
   }
 }
