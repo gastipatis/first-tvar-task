@@ -1,15 +1,15 @@
-#Requirements
+# Requirements
 
 * JVM 11
 * Maven
 
-#Compilation
+# Compilation
 
 ```bash
 mvn clean compile assembly:single
 ```
 
-#Execution
+# Execution
 
 ```bash
 mvn exec:exec
